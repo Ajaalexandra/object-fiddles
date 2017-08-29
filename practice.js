@@ -3,11 +3,13 @@
 
 //Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
 
-  //Code here
+ var me = {
+name: 'Aja',
+age: 24
 
+ };
 
-
-
+ alert(me.name);
 
 
 //NEXT PROBLEM
@@ -19,7 +21,14 @@
 
   //Code here
 
-
+var favoriteThings = {
+  band: "The Eagles",
+  food: "Croissant",
+  person: "me",
+  book: "The Notebook",
+  movie: "The Notebook",
+  holiday: "Xmas"
+}
 
 
 
@@ -27,7 +36,8 @@
 
 //After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 
-  //Code here
+  favoriteThings.car = 'bomb';
+  favoriteThings.brand = 'Mercedes';
 
 
 
@@ -35,9 +45,8 @@
 
 //Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 
-  //Code here
-
-
+ favoriteThings.food = "Chicken Nuggets" ;
+ favoriteThings.book = "Harry Potter" ;//Code here
 
 
 
@@ -55,7 +64,14 @@ Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. 
 */
 
-  //Code here
+ var backPack = {};
+
+   var item = "firstPocket";
+
+   backPack[item] = "chapstick";
+
+   backPack.color = "Blue";
+ //Code here
 
 
 
@@ -65,7 +81,10 @@ that is named color, with the value being the color of your backpack.
 //After you do the above, alert your entire backPack object.
 
   //Code here
+  
+// alert(JSON.stringfy(backPack));
 
+//console.log(backPack);
  
 
 /*
@@ -96,7 +115,8 @@ var user2 = {
 //Let's say I, the user, decided to change my name and email address to the following
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
-  //Code Here
+ user2.name = "Tyler S. McGinnis" ;
+ user2.email = "tyler.mcginnis@devmounta.in" ;//Code Here
 
 
 
@@ -118,7 +138,7 @@ var user2 = {
 
 //Create an empty object called methodCollection.
 
-  //Code Here
+  var methodCollection = {};//Code Here
 
 
 
@@ -129,7 +149,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
  which logs 'hello' to the console. 
  */
 
-  //Code Here
+ methodCollection.alertHello = function () {
+   alert ('hello');
+ }; 
+ 
+ 
+ methodCollection.logHello = function () {
+   console.log('hello');
+ };//Code Here
 
 
 
@@ -137,7 +164,8 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 //Now call your alertHello and logHello methods.
 
-  //Code Here
+  // methodCollection.alertHello();
+ // methodCollection.logHello(); //Code Here
 
 
 
@@ -152,6 +180,18 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 // Create a function called makePerson which takes in name, birthday, ssn as its
 // parameters and returns a new object with all of the information that you passed in.
+
+ function makePerson (name, birthday, ssn) {
+  var person = {};
+  person.name= name;
+  person.birthday = birthday;
+  person.ssn = ssn;
+
+  return person;
+
+
+ }
+
 
   //Code Here
 
@@ -168,6 +208,12 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 // Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
 
-  //Code Here
+ function makeCard( cardNumber, expirationDate, securityCode) {
+   return {
+     cardNumber: cardNumber,
+     expirationDate: expirationDate,
+     securityCode: securityCode
+   };
+ }; //Code Here
 
 
